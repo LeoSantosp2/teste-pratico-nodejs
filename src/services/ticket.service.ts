@@ -30,7 +30,7 @@ export class TicketService {
     return ticket;
   }
 
-  list(status: TicketStatus): Ticket[] {
+  list(status?: TicketStatus): Ticket[] {
     let tickets = this.repo.findAll();
 
     if (status) {
